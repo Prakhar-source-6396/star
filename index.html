@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      #sec1 {
+        height: 200vh;
+        background-image: url(./background.jpg);
+        width: 100%;
+        color: white;
+        display: flex;
+      }
+      nav {
+        height: auto;
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        position: fixed;
+        display: flex;
+        color: antiquewhite;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+      }
+      .div_left {
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: mediumspringgreen;
+        font-weight: 800;
+        font-size: 30px;
+      }
+      .div_center {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+        font-weight: 800;
+        font-size: 25px;
+      }
+      .div_center ul {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .div_right {
+        height: auto;
+        width: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .div_right button {
+        height: 35px;
+        background-color: rgb(41, 187, 121);
+        width: 30%;
+        border-radius: 30px;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        outline: none;
+      }
+      .div_right i {
+        font-size: 30px;
+        display: none;
+      }
+      .data {
+        height: 120px;
+        width: 28%;
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        color: mediumseagreen;
+        font-size: 35px;
+        font-weight: 800;
+      }
+      .data_in {
+        height: 70px;
+        width: 100%;
+        color: white;
+        display: flex;
+      }
+      .join {
+        display: flex;
+        width: 50%;
+      }
+      .join button {
+        height: 40px;
+        background-color: rgb(41, 240, 134);
+        text-align: center;
+        width: 50%;
+        border-radius: 20px;
+        color: white;
+        font-weight: 800;
+        border: none;
+        outline: none;
+      }
+      .earth {
+        height: 880px;
+        width: 60%;
+        display: flex;
+        align-items: center;
+        background-image: url(./earthPlanet.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 55%;
+        left: 20%;
+        /* border-radius: 50%; */
+        animation-name: earth;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        position: absolute;
+        z-index: 2;
+      }
+      @keyframes earth {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .astronaut {
+        height: 320px;
+        width: 32%;
+        justify-content: center;
+        position: absolute;
+        display: flex;
+        top: 25%;
+        left: 60%;
+        background-image: url(./hero.png);
+        /* background-size: cover; */
+        background-size: 80%;
+        background-repeat: no-repeat;
+        animation: astro 3s linear 0s infinite normal none running;
+        z-index: 2;
+      }
+      @keyframes astro {
+        0% {
+          transform: translate(0px, 0px);
+        }
+        50% {
+          transform: translate(10px, 10px);
+        }
+        100% {
+          transform: translate(0px, 0px);
+        }
+      }
+      .moon {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: -60px;
+        left: 50%;
+        animation: 40s linear 0s infinite normal none running moon;
+        z-index: 1;
+      }
+      @keyframes moon {
+        0% {
+          transform: rotate(0deg) translateX(600px);
+        }
+        100% {
+          transform: rotate(360deg) translateX(600px);
+        }
+      }
+      /* // media queries */
+      @media screen and (max-width: 999px) {
+        .div_right i {
+          display: block;
+        }
+        .div_right button {
+          display: none;
+        }
+        .div_center {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section id="sec1">
+      <nav>
+        <div class="div_left">
+          <!-- <img src="./logo.png" height="50px" , width="50px" /> -->
+          Stargazer
+        </div>
+        <div class="div_center">
+          <ul>
+            <li>Home</li>
+            <li>Explore</li>
+            <li>Space-Snap</li>
+            <li>Experience</li>
+          </ul>
+        </div>
+        <div class="div_right">
+          <button>Hello</button>
+          <i>|||</i>
+        </div>
+      </nav>
+      <div class="data">
+        Stellar Horizons: <b style="color: aliceblue">Exploring</b>
+        <div class="data_in"><p>the Universe</p></div>
+        <br />
+        <div class="join">
+          <button>join Us</button>
+        </div>
+      </div>
+
+      <div class="earth"></div>
+      <div class="astronaut"></div>
+      <div class="moon">
+        <img src="./moon.png" height="50px" width="50px" />
+      </div>
+    </section>
+    <section id="spaceSnape">
+      <h1>Space Snap</h1>
+    </section>
+    <script src="./script1.js"></script>
+  </body>
+</html>
